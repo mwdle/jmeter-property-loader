@@ -59,4 +59,12 @@ public class JMeterPropertyLoader extends ConfigTestElement implements TestBean,
     public void testEnded(String s) {
         testEnded();
     }
+
+    public String getPropFilePath() {
+        return propFilePath;
+    }
+
+    public void setPropFilePath(String propFilePath) {
+        this.propFilePath = propFilePath;
+    }
 }
