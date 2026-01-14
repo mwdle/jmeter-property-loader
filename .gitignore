@@ -46,7 +46,7 @@ out/
 # Miscellaneous
 .idea/misc.xml
 .idea/vcs.xml
-
+.idea/encodings.xml
 
 # SonarLint plugin
 .idea/sonarlint/
