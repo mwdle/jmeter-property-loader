@@ -40,6 +40,14 @@
 # IntelliJ
 out/
 
+# Copilot
+.idea/copilot*.xml
+
+# Miscellaneous
+.idea/misc.xml
+.idea/vcs.xml
+
+
 # SonarLint plugin
 .idea/sonarlint/
 .idea/sonarlint.xml # see https://community.sonarsource.com/t/is-the-file-idea-idea-idea-sonarlint-xml-intended-to-be-under-source-control/121119
