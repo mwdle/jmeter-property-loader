@@ -14,14 +14,14 @@ import java.nio.file.InvalidPathException;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
-public class QAPropertyLoader extends ConfigTestElement implements TestBean, TestStateListener {
+public class JMeterPropertyLoader extends ConfigTestElement implements TestBean, TestStateListener {
 
     private final Logger log;
     private String propFilePath;
 
-    public QAPropertyLoader() {
+    public JMeterPropertyLoader() {
         super();
-        log = LoggerFactory.getLogger(QAPropertyLoader.class);
+        log = LoggerFactory.getLogger(JMeterPropertyLoader.class);
     }
 
     @Override
@@ -52,7 +52,7 @@ public class QAPropertyLoader extends ConfigTestElement implements TestBean, Tes
 
     @Override
     public void testEnded() {
-        log.info("Shutting down QAPropertyLoader.");
+        log.info("Shutting down JMeterPropertyLoader");
     }
 
     @Override

@@ -3,11 +3,11 @@ import org.apache.jmeter.testbeans.gui.FileEditor;
 
 import java.beans.PropertyDescriptor;
 
-public class QAPropertyLoaderBeanInfo extends BeanInfoSupport {
+public class JMeterPropertyLoaderBeanInfo extends BeanInfoSupport {
     private static final String PROPERTY_FILE_PATH = "propFilePath";
 
-    public QAPropertyLoaderBeanInfo() {
-        super(QAPropertyLoader.class);
+    public JMeterPropertyLoaderBeanInfo() {
+        super(JMeterPropertyLoader.class);
         PropertyDescriptor p = property(PROPERTY_FILE_PATH);
         p.setValue(NOT_UNDEFINED, true);
         p.setValue(DEFAULT, "");
