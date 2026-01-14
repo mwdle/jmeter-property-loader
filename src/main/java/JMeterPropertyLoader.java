@@ -16,7 +16,7 @@ import java.nio.file.Paths;
 
 public class JMeterPropertyLoader extends ConfigTestElement implements TestBean, TestStateListener {
 
-    private final Logger log;
+    private final transient Logger log;
     private String propFilePath;
 
     public JMeterPropertyLoader() {
@@ -26,15 +26,16 @@ public class JMeterPropertyLoader extends ConfigTestElement implements TestBean,
 
     @Override
     public void testStarted() {
-        log.info("Starting QAPropertyLoader.");
+        log.info("Starting JMeterPropertyLoader");
         try {
             Path path = Paths.get(propFilePath);
             if (!path.isAbsolute()) {
                 path = Paths.get(FileServer.getFileServer().getBaseDir(), path.toString());
             }
             log.info("Loading properties from file {}", path);
-            FileInputStream fis = new FileInputStream(path.toString());
-            JMeterUtils.getJMeterProperties().load(fis);
+            try (FileInputStream fis = new FileInputStream(path.toString())) {
+                JMeterUtils.getJMeterProperties().load(fis);
+            }
             log.info("Properties successfully loaded.");
         } catch (InvalidPathException e) {
             log.error("Invalid property file path: {}", propFilePath);
