@@ -21,6 +21,9 @@ syntax.
 2. Copy the generated JAR from `target/` to `JMETER_HOME/lib/ext/`
 3. Restart JMeter
 
+Note: You might need to explicitly use JDK version 17.
+In IntelliJ, you can change that in the project structure. Otherwise, you can change JAVAHOME, JAVA, or add jdk17 to your path.
+
 ## Usage
 
 ### 1. Add the Plugin to Your Test Plan
