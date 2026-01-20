@@ -29,6 +29,8 @@ syntax.
 - Add → Config Element → **Property File Loader**
 - Use the file browser to select your `.properties` file
 
+**Important:** Place the Property File Loader at the **top of your Test Plan** (before any listeners or other elements that depend on the loaded properties). This ensures properties are available before other test elements initialize.
+
 ### 2. Create a Properties File
 
 Example `secrets.properties`:
