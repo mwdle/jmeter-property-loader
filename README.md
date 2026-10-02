@@ -18,10 +18,8 @@ syntax.
    ```bash
    mvn clean package
    ```
-2. Copy the generated JAR from `target/` to `JMETER_HOME/lib/ext/`
+2. Copy the generated JAR from `target/` to `<JMETER_HOME>/lib/ext/`
 3. Restart JMeter
-
-Note: You should compile the jar using JDK version 17, bceause that is the runtime currently installed on the load test VMs. In Intellij, you can adjust this in the project structure.
 
 ## Usage
 
